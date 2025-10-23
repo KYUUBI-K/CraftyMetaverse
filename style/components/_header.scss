@@ -1,0 +1,103 @@
+@use "../media" as *;
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background: rgba(0, 0, 0, 0);
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 110px;
+  }
+  &__menu {
+    @include respond(laptop) {
+      display: none;
+    }
+    &-list {
+      display: flex;
+      align-items: center;
+      gap: 45px;
+    }
+    &-link {
+      font-family: var(--font--family-base);
+      font-size: 20px;
+      font-weight: 500;
+      line-height: 140%;
+      opacity: 0.7;
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+}
+.active {
+  opacity: 1;
+  position: relative;
+}
+.active::after {
+  content: "";
+  display: block;
+  position: absolute;
+  margin-top: 8px;
+  width: 30px;
+  height: 2px;
+  background-color: rgba(0, 219, 222, 1);
+}
+
+.mobile__menu {
+  overflow-y: auto;
+  position: absolute;
+  top: 0;
+  z-index: 200;
+  height: 100vh;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: translateX(-100%); // старт за межами екрана
+  transition: transform 0.45s cubic-bezier(0.25, 1, 0.3, 1), opacity 0.35s ease;
+  background: var(--color-black);
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  &__open-btn {
+    display: none;
+    border: none;
+    background: none;
+    @include respond(laptop) {
+      display: block;
+    }
+  }
+  &__close-btn {
+    border: none;
+    background: none;
+  }
+}
+.mobile__menu.is-open {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: all;
+  transform: translateX(0);
+}
+.no-scroll {
+  overflow: hidden;
+}
+.hidden {
+  display: none;
+}
+
+.mobile__menu__container {
+  padding-top: 140px;
+}
+.mobile__menu-list {
+  display: flex;
+  flex-direction: column;
+  row-gap: 40px;
+  font-family: var(--font--family-base);
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 140%;
+  opacity: 0.7;
+}

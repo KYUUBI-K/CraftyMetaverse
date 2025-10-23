@@ -1,0 +1,17 @@
+.wrapper {
+  // max-width: calc(var(--container--width) + var(--container--padding-x) * 2);
+  margin-inline: auto;
+  max-width: var(--container--width);
+  padding-inline: var(--container--padding-x);
+}
+.button {
+  color: rgba(255, 255, 255, 1);
+  padding: 16px 24px;
+  border-radius: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.56);
+  background: linear-gradient(99deg, #7a42f4 0%, #4642f4 100%), #fff;
+  font-family: "HeliosBlackC", sans-serif;
+  font-size: 18px;
+  line-height: 145%;
+  cursor: pointer;
+}
