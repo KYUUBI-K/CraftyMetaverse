@@ -4,13 +4,16 @@
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 1000;
+  z-index: 10000;
   background: rgba(0, 0, 0, 0);
   &__container {
     display: flex;
     align-items: center;
     justify-content: space-between;
     height: 110px;
+  }
+  &-logo {
+    z-index: 1000;
   }
   &__menu {
     @include respond(laptop) {
@@ -48,38 +51,83 @@
 }
 
 .mobile__menu {
-  overflow-y: auto;
-  position: absolute;
-  top: 140px;
-  z-index: 200;
+  position: fixed;
+  top: 0;
+  left: 0;
   height: 100vh;
-  opacity: 0;
+  width: 100%;
+
   visibility: hidden;
-  pointer-events: none;
+
   transform: translateX(-100%);
   transition: transform 0.45s cubic-bezier(0.25, 1, 0.3, 1), opacity 0.35s ease;
-  background: var(--color-black);
-  overflow-y: auto;
-  overflow-x: hidden;
 
+  &.is-open {
+    transform: translateX(0);
+    visibility: visible;
+  }
   &__open-btn {
+    z-index: 1000;
     display: none;
+    flex-direction: column;
+    align-items: flex-end;
     border: none;
     background: none;
-    @include respond(laptop) {
+
+    span {
+      background-color: white;
       display: block;
+      height: 1px;
+      transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+      &:nth-child(1) {
+        width: 32px;
+      }
+      &:nth-child(2) {
+        width: 19px;
+        margin: 6px 0;
+      }
+      &:nth-child(3) {
+        width: 25px;
+      }
+    }
+    @include respond(laptop) {
+      display: flex;
+    }
+    &.is-active {
+      span:nth-child(1) {
+        transform: translateY(7px) rotate(45deg);
+      }
+      span:nth-child(2) {
+        opacity: 0;
+      }
+      span:nth-child(3) {
+        width: 32px;
+        transform: translateY(-7px) rotate(-45deg);
+      }
     }
   }
-  &__close-btn {
-    border: none;
-    background: none;
-    border: none;
+
+  &-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+    z-index: -1;
   }
-  &.is-open {
-    opacity: 1;
-    visibility: visible;
-    pointer-events: all;
-    transform: translateX(0);
+
+  &__container {
+    margin-top: 110px;
+  }
+  &__nav {
+    padding-top: 140px;
+    padding-left: 15px;
+    z-index: 1;
+    height: 100%;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
   }
   &-list {
     display: flex;
@@ -93,13 +141,6 @@
     line-height: 140%;
     opacity: 0.7;
   }
-}
-
-.no-scroll {
-  overflow: hidden;
-}
-.hidden {
-  display: none;
 }
 
 .mobile-active {

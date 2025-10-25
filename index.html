@@ -51,81 +51,58 @@
           </ul>
         </nav>
         <button type="button" class="mobile__menu__open-btn" menu-open>
-          <svg
-            width="32"
-            height="18"
-            viewBox="0 0 32 18"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <line
-              x1="1"
-              y1="-1"
-              x2="18"
-              y2="-1"
-              transform="matrix(-1 0 0 1 32 10)"
-              stroke="white"
-              stroke-width="2"
-              stroke-linecap="round"
-            />
-            <line
-              x1="1"
-              y1="-1"
-              x2="31"
-              y2="-1"
-              transform="matrix(-1 0 0 1 32 2)"
-              stroke="white"
-              stroke-width="2"
-              stroke-linecap="round"
-            />
-            <line
-              x1="1"
-              y1="-1"
-              x2="24"
-              y2="-1"
-              transform="matrix(-1 0 0 1 32 18)"
-              stroke="white"
-              stroke-width="2"
-              stroke-linecap="round"
-            />
-          </svg>
+          <span></span>
+          <span></span>
+          <span></span>
         </button>
-         <button class="mobile__menu__close-btn hidden" menu-close>
-              <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M21 1L1 21" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M1 1L21 21" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-</svg>
-            </button>
-         <div class="mobile__menu js-menu" menu>
-           
-            <div class="mobile__menu__container">
+        <div class="mobile__menu js-menu" menu>
+          <picture>
+            <source srcset="/assets/img/menu-bg-webp.webp" type="image/webp" />
+            <img
+              class="mobile__menu-bg"
+              src="/assets/img/menu-bg.jpg"
+              alt="bg-menu"
+            />
+          </picture>
+          <div class="mobile__menu__container">
+            <nav class="mobile__menu__nav">
               <ul class="mobile__menu-list js-nav">
-             <li class="mobile__menu-item">
-              <a href="#home" class="header__menu-link mobile-active">Home</a>
-            </li>
-            <li class="mobile__menu-item">
-              <a href="#about" class="mobile__menu-link">About Us</a>
-            </li>
-            <li class="mobile__menu-item">
-              <a href="#paper" class="mobile__menu-link">White paper</a>
-            </li>
-            <li class="header__menu-item">
-              <a href="#tokenomics" class="mobile__menu-link">Tokenomics</a>
-            </li>
-            <li class="mobile__menu-item">
-              <a href="#roadMap" class="mobile__menu-link">Road Map</a>
-            </li>
-            <li class="mobile__menu-item">
-              <a href="#howBuy" class="mobile__menu-link">How to buy</a>
-            </li>
-            <li class="mobile__menu-item">
-              <a href="#buy" class="mobile__menu-link">Buy</a>
-            </li>
+                <li class="mobile__menu-item">
+                  <a href="#home" class="mobile__menu-link mobile-active"
+                    >Home</a
+                  >
+                </li>
+                <li class="mobile__menu-item">
+                  <a href="#about" class="mobile__menu-link">About Us</a>
+                </li>
+                <li class="mobile__menu-item">
+                  <a href="#paper" class="mobile__menu-link">White paper</a>
+                </li>
+                <li class="header__menu-item">
+                  <a href="#tokenomics" class="mobile__menu-link">Tokenomics</a>
+                </li>
+                <li class="mobile__menu-item">
+                  <a href="#roadMap" class="mobile__menu-link">Road Map</a>
+                </li>
+                <li class="mobile__menu-item">
+                  <a href="#howBuy" class="mobile__menu-link">How to buy</a>
+                </li>
+                <li class="mobile__menu-item">
+                  <a href="#buy" class="mobile__menu-link">Buy</a>
+                </li>
               </ul>
+            </nav>
+          </div>
+        </div>
       </div>
     </header>
     <main>
-      <section class="hero"></section>
+      <section class="hero">
+        <!-- <picture>
+          <source src="/assets/img/hero-bg-webp.webp" type="image/webp" />
+          <img class="hero-bg" src="/assets/img/hero-bg.jpg" alt="bg-hero" />
+        </picture> -->
+      </section>
     </main>
     <footer></footer>
   </body>
