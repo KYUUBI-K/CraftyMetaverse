@@ -453,12 +453,11 @@ body {
   margin-top: 110px;
 }
 .mobile__menu__nav {
-  padding-top: 140px;
   padding-left: 15px;
   z-index: 1;
-  height: 100%;
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
+  height: calc(var(--app-height) - 50px);
 }
 .mobile__menu-list {
   display: flex;
