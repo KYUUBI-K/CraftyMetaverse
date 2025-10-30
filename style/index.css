@@ -341,12 +341,20 @@ body {
   width: 100%;
   z-index: 10000;
   background: rgba(0, 0, 0, 0);
+  transition: background 0.8s ease, opacity 0.8s ease;
+}
+.header-scroll {
+  background: rgba(20, 20, 20, 0.95);
 }
 .header__container {
   display: flex;
   align-items: center;
   justify-content: space-between;
   height: 110px;
+  transition: background 1s ease;
+}
+.header-container-bg {
+  background: rgba(20, 20, 20, 0.95);
 }
 .header-logo {
   z-index: 1000;
