@@ -3,6 +3,7 @@
   overflow-x: hidden;
   position: relative;
   // height: 100vh;
+  // height: var(--app-height);
   max-height: 100%;
   &-bg {
     position: absolute;
@@ -39,10 +40,20 @@
       border-radius: 41px;
       background: #7f5cff;
       box-shadow: 0 0 17px 0 rgba(191, 58, 255, 0.4);
+      @include respond(laptop) {
+        top: 440px;
+        left: -150px;
+        width: 340px;
+      }
       @include respond(tablet) {
         top: 380px;
         left: -150px;
         width: 345px;
+      }
+      @include respond(mobile) {
+        top: 340px;
+        left: -115px;
+        width: 260px;
       }
     }
   }
@@ -107,6 +118,10 @@
     @include respond(laptop) {
       margin-top: 20px;
     }
+    @include respond(bigMobile) {
+      margin-top: 12px;
+      padding: 14px 22px;
+    }
   }
 
   &__lines {
@@ -115,42 +130,40 @@
     max-height: 450px;
     left: -45px;
     top: 275px;
+    @include respond(laptop) {
+      left: 20px;
+      top: 270px;
+    }
     @include respond(tablet) {
       left: 20px;
       top: 215px;
     }
+    @include respond(mobile) {
+      left: 20px;
+      top: 215px;
+    }
+
     &-line {
+      @include respond(laptop) {
+        max-height: 340px;
+      }
       @include respond(tablet) {
         max-height: 340px;
+      }
+      @include respond(mobile) {
+        max-height: 260px;
       }
     }
   }
 
   &__blures {
+    overflow: hidden;
     position: absolute;
     height: 100%;
     width: 100%;
     top: 0;
     left: 0;
-    &-ellipse17 {
-      position: absolute;
-      top: 15%;
-      left: 34%;
-      transform: rotate(-2.814deg);
-      object-fit: cover;
-      z-index: 0;
-      width: 45vw;
-      max-width: 791px;
-    }
-    &-ellipse18 {
-      position: absolute;
-      top: 12%;
-      left: 22%;
-      transform: rotate(-2.814deg);
-      object-fit: cover;
-      z-index: 0;
-      max-width: 1265px;
-    }
+
     &-ellipse239 {
       position: absolute;
       left: -12%;
@@ -160,12 +173,28 @@
       opacity: 0.5;
       z-index: 0;
       max-width: 859px;
+      @include respond(laptopL) {
+        left: -15%;
+      }
+      @include respond(laptop) {
+        left: -24%;
+      }
+      @include respond(tablet) {
+        left: -48%;
+      }
+      @include respond(bigMobile) {
+        max-width: 462px;
+        left: -30%;
+      }
     }
     &-rectangle30 {
       position: absolute;
       top: 0;
       left: 0;
       z-index: 0;
+      @include respond(bigMobile) {
+        display: none;
+      }
     }
     &-ellipse240 {
       position: absolute;
@@ -175,6 +204,20 @@
       object-fit: cover;
       z-index: 0;
       max-width: 859px;
+      @include respond(laptopL) {
+        right: -15%;
+      }
+      @include respond(laptop) {
+        right: -20%;
+      }
+      @include respond(tablet) {
+        right: -26%;
+      }
+      @include respond(bigMobile) {
+        max-width: 510px;
+        right: -30%;
+        top: 27%;
+      }
     }
     &-rectangle31 {
       position: absolute;
@@ -182,6 +225,19 @@
       left: 0;
       z-index: 0;
       max-width: 378px;
+      @include respond(laptop) {
+        bottom: -15%;
+        left: -5%;
+      }
+      @include respond(tablet) {
+        bottom: -20%;
+        left: -8%;
+      }
+      @include respond(bigMobile) {
+        max-width: 212px;
+        bottom: -12%;
+        left: -8%;
+      }
     }
   }
 }

@@ -1,5 +1,9 @@
 @mixin respond($breakpoint) {
-  @if $breakpoint == laptop {
+  @if $breakpoint == laptopL {
+    @media (max-width: 1440px) {
+      @content;
+    }
+  } @else if $breakpoint == laptop {
     @media (max-width: 1024px) {
       @content;
     }

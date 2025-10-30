@@ -305,7 +305,7 @@ li {
   --font--family-accent: "HeliosExtC", sans-serif;
   --font-family-size-base: 18px;
   --container--width: 1660px;
-  --container--padding-x: 15px;
+  --container--padding-x: 20px;
 }
 
 .wrapper {
@@ -472,6 +472,34 @@ body {
   line-height: 140%;
   opacity: 0.7;
 }
+.mobile__menu__blures {
+  overflow: hidden;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+.mobile__menu__blures-ellipse243 {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 27%;
+  object-fit: cover;
+  opacity: 0.5;
+  z-index: 0;
+  max-width: 512px;
+}
+@media (max-width: 425px) {
+  .mobile__menu__blures-ellipse243 {
+    display: block;
+  }
+}
+.mobile__menu__blures-rectangle30 {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
 
 .mobile-active {
   opacity: 1;
@@ -534,11 +562,25 @@ body {
   background: #7f5cff;
   box-shadow: 0 0 17px 0 rgba(191, 58, 255, 0.4);
 }
+@media (max-width: 1024px) {
+  .hero__container::before {
+    top: 440px;
+    left: -150px;
+    width: 340px;
+  }
+}
 @media (max-width: 768px) {
   .hero__container::before {
     top: 380px;
     left: -150px;
     width: 345px;
+  }
+}
+@media (max-width: 375px) {
+  .hero__container::before {
+    top: 340px;
+    left: -115px;
+    width: 260px;
   }
 }
 .hero__title {
@@ -618,6 +660,12 @@ body {
     margin-top: 20px;
   }
 }
+@media (max-width: 425px) {
+  .hero__button {
+    margin-top: 12px;
+    padding: 14px 22px;
+  }
+}
 .hero__lines {
   position: absolute;
   z-index: -1;
@@ -625,10 +673,27 @@ body {
   left: -45px;
   top: 275px;
 }
+@media (max-width: 1024px) {
+  .hero__lines {
+    left: 20px;
+    top: 270px;
+  }
+}
 @media (max-width: 768px) {
   .hero__lines {
     left: 20px;
     top: 215px;
+  }
+}
+@media (max-width: 375px) {
+  .hero__lines {
+    left: 20px;
+    top: 215px;
+  }
+}
+@media (max-width: 1024px) {
+  .hero__lines-line {
+    max-height: 340px;
   }
 }
 @media (max-width: 768px) {
@@ -636,31 +701,18 @@ body {
     max-height: 340px;
   }
 }
+@media (max-width: 375px) {
+  .hero__lines-line {
+    max-height: 260px;
+  }
+}
 .hero__blures {
+  overflow: hidden;
   position: absolute;
   height: 100%;
   width: 100%;
   top: 0;
   left: 0;
-}
-.hero__blures-ellipse17 {
-  position: absolute;
-  top: 15%;
-  left: 34%;
-  transform: rotate(-2.814deg);
-  object-fit: cover;
-  z-index: 0;
-  width: 45vw;
-  max-width: 791px;
-}
-.hero__blures-ellipse18 {
-  position: absolute;
-  top: 12%;
-  left: 22%;
-  transform: rotate(-2.814deg);
-  object-fit: cover;
-  z-index: 0;
-  max-width: 1265px;
 }
 .hero__blures-ellipse239 {
   position: absolute;
@@ -672,11 +724,37 @@ body {
   z-index: 0;
   max-width: 859px;
 }
+@media (max-width: 1440px) {
+  .hero__blures-ellipse239 {
+    left: -15%;
+  }
+}
+@media (max-width: 1024px) {
+  .hero__blures-ellipse239 {
+    left: -24%;
+  }
+}
+@media (max-width: 768px) {
+  .hero__blures-ellipse239 {
+    left: -48%;
+  }
+}
+@media (max-width: 425px) {
+  .hero__blures-ellipse239 {
+    max-width: 462px;
+    left: -30%;
+  }
+}
 .hero__blures-rectangle30 {
   position: absolute;
   top: 0;
   left: 0;
   z-index: 0;
+}
+@media (max-width: 425px) {
+  .hero__blures-rectangle30 {
+    display: none;
+  }
 }
 .hero__blures-ellipse240 {
   position: absolute;
@@ -687,10 +765,51 @@ body {
   z-index: 0;
   max-width: 859px;
 }
+@media (max-width: 1440px) {
+  .hero__blures-ellipse240 {
+    right: -15%;
+  }
+}
+@media (max-width: 1024px) {
+  .hero__blures-ellipse240 {
+    right: -20%;
+  }
+}
+@media (max-width: 768px) {
+  .hero__blures-ellipse240 {
+    right: -26%;
+  }
+}
+@media (max-width: 425px) {
+  .hero__blures-ellipse240 {
+    max-width: 510px;
+    right: -30%;
+    top: 27%;
+  }
+}
 .hero__blures-rectangle31 {
   position: absolute;
   bottom: -13%;
   left: 0;
   z-index: 0;
   max-width: 378px;
+}
+@media (max-width: 1024px) {
+  .hero__blures-rectangle31 {
+    bottom: -15%;
+    left: -5%;
+  }
+}
+@media (max-width: 768px) {
+  .hero__blures-rectangle31 {
+    bottom: -20%;
+    left: -8%;
+  }
+}
+@media (max-width: 425px) {
+  .hero__blures-rectangle31 {
+    max-width: 212px;
+    bottom: -12%;
+    left: -8%;
+  }
 }/*# sourceMappingURL=index.css.map */
