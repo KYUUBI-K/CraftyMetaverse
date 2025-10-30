@@ -447,17 +447,18 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  background-color: #000;
   z-index: -1;
 }
 .mobile__menu__container {
-  margin-top: 110px;
+  margin-top: 140px;
 }
 .mobile__menu__nav {
   padding-left: 15px;
   z-index: 1;
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
-  height: calc(var(--app-height) - 50px);
+  height: calc(var(--app-height) - 150px);
 }
 .mobile__menu-list {
   display: flex;
@@ -487,7 +488,209 @@ body {
   background-color: rgb(0, 219, 222);
 }
 
+.no-scroll {
+  overflow: hidden;
+}
+
 .hero {
+  overflow-x: hidden;
+  position: relative;
+  max-height: 100%;
+}
+.hero-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
-  height: 100vh;
+  height: 100%;
+  object-fit: cover;
+  object-position: 30% 50%;
+  z-index: -1;
+}
+.hero__container {
+  z-index: 1;
+  padding: 290px 75px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  align-items: start;
+  height: 100%;
+}
+@media (max-width: 768px) {
+  .hero__container {
+    padding: 230px 40px;
+  }
+}
+.hero__container::before {
+  top: 510px;
+  left: -220px;
+  content: "";
+  display: block;
+  position: absolute;
+  width: 475px;
+  height: 6px;
+  transform: rotate(90deg);
+  border-radius: 41px;
+  background: #7f5cff;
+  box-shadow: 0 0 17px 0 rgba(191, 58, 255, 0.4);
+}
+@media (max-width: 768px) {
+  .hero__container::before {
+    top: 380px;
+    left: -150px;
+    width: 345px;
+  }
+}
+.hero__title {
+  font-family: var(--font--family-base);
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
+  text-transform: uppercase;
+}
+@media (max-width: 1024px) {
+  .hero__title {
+    font-size: 18px;
+  }
+}
+@media (max-width: 768px) {
+  .hero__title {
+    font-size: 16px;
+  }
+}
+.hero__description {
+  padding-top: 10px;
+  width: 753px;
+  font-family: var(--font--family-accent);
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 140%;
+  letter-spacing: 0.48px;
+  text-transform: uppercase;
+  position: relative;
+}
+.hero__description span {
+  display: inline-block;
+  vertical-align: -7px;
+}
+@media (max-width: 768px) {
+  .hero__description span {
+    position: absolute;
+    bottom: 35px;
+    left: 203px;
+  }
+  .hero__description span svg {
+    width: 26px;
+    height: 26px;
+  }
+}
+@media (max-width: 768px) and (max-width: 768px) {
+  .hero__description span {
+    display: none;
+  }
+}
+@media (max-width: 1024px) {
+  .hero__description {
+    font-size: 36px;
+  }
+}
+@media (max-width: 768px) {
+  .hero__description {
+    padding-top: 16px;
+    width: 347px;
+    font-size: 26px;
+  }
+}
+@media (max-width: 375px) {
+  .hero__description {
+    font-size: 18px;
+    width: 300px;
+  }
+}
+.hero__button {
+  width: 209px;
+  margin-top: 70px;
+}
+@media (max-width: 1024px) {
+  .hero__button {
+    margin-top: 20px;
+  }
+}
+.hero__lines {
+  position: absolute;
+  z-index: -1;
+  max-height: 450px;
+  left: -45px;
+  top: 275px;
+}
+@media (max-width: 768px) {
+  .hero__lines {
+    left: 20px;
+    top: 215px;
+  }
+}
+@media (max-width: 768px) {
+  .hero__lines-line {
+    max-height: 340px;
+  }
+}
+.hero__blures {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+.hero__blures-ellipse17 {
+  position: absolute;
+  top: 15%;
+  left: 34%;
+  transform: rotate(-2.814deg);
+  object-fit: cover;
+  z-index: 0;
+  width: 45vw;
+  max-width: 791px;
+}
+.hero__blures-ellipse18 {
+  position: absolute;
+  top: 12%;
+  left: 22%;
+  transform: rotate(-2.814deg);
+  object-fit: cover;
+  z-index: 0;
+  max-width: 1265px;
+}
+.hero__blures-ellipse239 {
+  position: absolute;
+  left: -12%;
+  top: 0;
+  transform: rotate(34.59deg);
+  object-fit: cover;
+  opacity: 0.5;
+  z-index: 0;
+  max-width: 859px;
+}
+.hero__blures-rectangle30 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+.hero__blures-ellipse240 {
+  position: absolute;
+  right: -8%;
+  top: 8%;
+  transform: rotate(90deg);
+  object-fit: cover;
+  z-index: 0;
+  max-width: 859px;
+}
+.hero__blures-rectangle31 {
+  position: absolute;
+  bottom: -13%;
+  left: 0;
+  z-index: 0;
+  max-width: 378px;
 }/*# sourceMappingURL=index.css.map */

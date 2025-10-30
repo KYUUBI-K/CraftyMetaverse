@@ -1,6 +1,187 @@
+@use "../media" as *;
 .hero {
-  width: 100%;
-  height: 100vh;
-  // background-size: cover;
-  // background-repeat: no-repeat;
+  overflow-x: hidden;
+  position: relative;
+  // height: 100vh;
+  max-height: 100%;
+  &-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+    object-position: 30% 50%;
+    z-index: -1;
+  }
+  &__container {
+    z-index: 1;
+    padding: 290px 75px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    align-items: start;
+    height: 100%;
+
+    @include respond(tablet) {
+      padding: 230px 40px;
+    }
+    &::before {
+      top: 510px;
+      left: -220px;
+      content: "";
+      display: block;
+      position: absolute;
+      width: 475px;
+      height: 6px;
+      transform: rotate(90deg);
+      border-radius: 41px;
+      background: #7f5cff;
+      box-shadow: 0 0 17px 0 rgba(191, 58, 255, 0.4);
+      @include respond(tablet) {
+        top: 380px;
+        left: -150px;
+        width: 345px;
+      }
+    }
+  }
+  &__title {
+    font-family: var(--font--family-base);
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+    text-transform: uppercase;
+    @include respond(laptop) {
+      font-size: 18px;
+    }
+    @include respond(tablet) {
+      font-size: 16px;
+    }
+  }
+  &__description {
+    padding-top: 10px;
+    width: 753px;
+    font-family: var(--font--family-accent);
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 140%;
+    letter-spacing: 0.48px;
+    text-transform: uppercase;
+    position: relative;
+    span {
+      display: inline-block;
+      vertical-align: -7px;
+
+      @include respond(tablet) {
+        position: absolute;
+        bottom: 35px;
+        left: 203px;
+        svg {
+          width: 26px;
+          height: 26px;
+        }
+        @include respond(tablet) {
+          display: none;
+        }
+      }
+    }
+    @include respond(laptop) {
+      font-size: 36px;
+    }
+    @include respond(tablet) {
+      padding-top: 16px;
+      width: 347px;
+      font-size: 26px;
+    }
+    @include respond(mobile) {
+      font-size: 18px;
+      width: 300px;
+    }
+  }
+  &__button {
+    width: 209px;
+    margin-top: 70px;
+    @include respond(laptop) {
+      margin-top: 20px;
+    }
+  }
+
+  &__lines {
+    position: absolute;
+    z-index: -1;
+    max-height: 450px;
+    left: -45px;
+    top: 275px;
+    @include respond(tablet) {
+      left: 20px;
+      top: 215px;
+    }
+    &-line {
+      @include respond(tablet) {
+        max-height: 340px;
+      }
+    }
+  }
+
+  &__blures {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    &-ellipse17 {
+      position: absolute;
+      top: 15%;
+      left: 34%;
+      transform: rotate(-2.814deg);
+      object-fit: cover;
+      z-index: 0;
+      width: 45vw;
+      max-width: 791px;
+    }
+    &-ellipse18 {
+      position: absolute;
+      top: 12%;
+      left: 22%;
+      transform: rotate(-2.814deg);
+      object-fit: cover;
+      z-index: 0;
+      max-width: 1265px;
+    }
+    &-ellipse239 {
+      position: absolute;
+      left: -12%;
+      top: 0;
+      transform: rotate(34.59deg);
+      object-fit: cover;
+      opacity: 0.5;
+      z-index: 0;
+      max-width: 859px;
+    }
+    &-rectangle30 {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 0;
+    }
+    &-ellipse240 {
+      position: absolute;
+      right: -8%;
+      top: 8%;
+      transform: rotate(90deg);
+      object-fit: cover;
+      z-index: 0;
+      max-width: 859px;
+    }
+    &-rectangle31 {
+      position: absolute;
+      bottom: -13%;
+      left: 0;
+      z-index: 0;
+      max-width: 378px;
+    }
+  }
 }
