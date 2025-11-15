@@ -1,3 +1,4 @@
+@use "./media" as *;
 .wrapper {
   // max-width: calc(var(--container--width) + var(--container--padding-x) * 2);
   margin-inline: auto;
@@ -14,4 +15,26 @@
   font-size: 18px;
   line-height: 145%;
   cursor: pointer;
+}
+.title {
+  font-family: var(--font--family-accent);
+  font-size: 45px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 109%;
+  text-transform: uppercase;
+  @include respond(tablet) {
+    font-size: 28px;
+  }
+}
+.subtitle {
+  font-family: var(--font--family-base);
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
+  text-transform: uppercase;
+  @include respond(tablet) {
+    font-size: 16px;
+  }
 }
