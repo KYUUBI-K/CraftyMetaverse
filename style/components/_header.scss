@@ -68,10 +68,12 @@
   visibility: hidden;
 
   transform: translateX(-100%);
-  transition: transform 0.5s ease;
+
+  transition: transform 0.5s ease, visibility 0s 0.5s;
   &.is-open {
     transform: translateX(0);
     visibility: visible;
+    transition: transform 0.5s ease, visibility 0s 0s;
   }
   &__open-btn {
     z-index: 1000;
