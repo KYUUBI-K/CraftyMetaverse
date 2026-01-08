@@ -1736,11 +1736,11 @@ body {
 }
 .roadmap__lines-line-3 {
   position: absolute;
-  left: 40%;
+  left: 39%;
 }
 .roadmap__lines-line-4 {
   position: absolute;
-  left: 43%;
+  left: 41%;
 }
 .roadmap__lines-line-5 {
   position: absolute;
@@ -1749,5 +1749,5 @@ body {
 .roadmap__lines-line-6 {
   position: absolute;
   top: -3%;
-  left: 43%;
+  left: 42%;
 }/*# sourceMappingURL=index.css.map */
